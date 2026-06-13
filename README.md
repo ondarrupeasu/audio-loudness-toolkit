@@ -52,22 +52,22 @@ ui/
   workers.py          — análisis y exportación en segundo plano (no bloquea la UI)
   tp_worker.py        — recálculo de true peak en segundo plano
 main.py
-VerificadorAudio.spec — receta de empaquetado para PyInstaller (ver abajo)
+AudioLoudnessToolkit.spec — receta de empaquetado para PyInstaller (ver abajo)
 ```
 
 ## Empaquetar como .app
 
-El archivo `VerificadorAudio.spec` ya incluye las reglas para que PyInstaller
+El archivo `AudioLoudnessToolkit.spec` ya incluye las reglas para que PyInstaller
 empaquete los binarios de ffmpeg (`imageio-ffmpeg`), libsndfile (`soundfile`)
 y PortAudio (`sounddevice`), que normalmente quedan fuera del análisis
 automático. Con el venv activado:
 
 ```bash
 pip install pyinstaller pyinstaller-hooks-contrib
-pyinstaller VerificadorAudio.spec
+pyinstaller AudioLoudnessToolkit.spec
 ```
 
-Esto genera `dist/VerificadorAudio.app` (modo `--onedir`: arranca más rápido
+Esto genera `dist/AudioLoudnessToolkit.app` (modo `--onedir`: arranca más rápido
 que `--onefile` y es más fácil depurar si algo falla).
 
 La primera vez que lo abras, macOS (Gatekeeper) avisará de que es de un
@@ -77,7 +77,7 @@ requiere conexión a internet ni instalar nada más.
 Para probarlo desde terminal (verás cualquier traceback si falla al arrancar):
 
 ```bash
-dist/VerificadorAudio/VerificadorAudio
+dist/AudioLoudnessToolkit/AudioLoudnessToolkit
 ```
 
 Si da algún error de import, de ffmpeg no encontrado, o de audio
