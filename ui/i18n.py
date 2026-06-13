@@ -2,7 +2,7 @@
 
 STRINGS = {
     'es': {
-        'window_title': 'Verificador de audio — 5.1 / Estéreo / Mono',
+        'window_title': 'AudioLoudnessToolkit — 5.1 / Estéreo / Mono',
         'mode_label': 'Modo:',
         'mode_51': '5.1 (6 archivos)',
         'mode_stereo': 'Estéreo',
@@ -118,7 +118,7 @@ STRINGS = {
     },
 
     'en': {
-        'window_title': 'Audio Verifier — 5.1 / Stereo / Mono',
+        'window_title': 'AudioLoudnessToolkit — 5.1 / Stereo / Mono',
         'mode_label': 'Mode:',
         'mode_51': '5.1 (6 files)',
         'mode_stereo': 'Stereo',
