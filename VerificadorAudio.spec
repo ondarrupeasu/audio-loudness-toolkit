@@ -1,4 +1,5 @@
 # -*- mode: python ; coding: utf-8 -*-
+import sys
 from PyInstaller.utils.hooks import collect_data_files
 from PyInstaller.utils.hooks import collect_all
 
@@ -52,12 +53,13 @@ coll = COLLECT(
     upx_exclude=[],
     name='VerificadorAudio',
 )
-app = BUNDLE(
-    coll,
-    name='VerificadorAudio.app',
-    icon=None,
-    bundle_identifier='es.cinemafilmak.verificadoraudio',
-    info_plist={
-        'NSHighResolutionCapable': True,
-    },
-)
+if sys.platform == 'darwin':
+    app = BUNDLE(
+        coll,
+        name='VerificadorAudio.app',
+        icon=None,
+        bundle_identifier='es.cinemafilmak.verificadoraudio',
+        info_plist={
+            'NSHighResolutionCapable': True,
+        },
+    )
