@@ -1,0 +1,7 @@
+numpy
+scipy
+soundfile
+pyloudnorm
+imageio-ffmpeg
+PySide6
+sounddevice
